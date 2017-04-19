@@ -1,0 +1,6 @@
+<h1>{{ artist.artist }}</h1>
+<ul>
+{% for song in artist.song_set.all %}
+    <li>{{ song.song_name }}</li>
+{% endfor %}
+</ul>
