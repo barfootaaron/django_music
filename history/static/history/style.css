@@ -1,0 +1,18 @@
+#artistList {
+	margin-left: 20px;
+}
+
+li {
+	margin-top: 15px;
+	list-style-type: none;
+}
+
+li a {
+    color: #00796b;
+    margin-top: 15px;
+    text-decoration: none;
+
+}
+
+
+

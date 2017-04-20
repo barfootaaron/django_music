@@ -1,9 +1,19 @@
-{% if artist_list %}
-    <ul>
-    {% for artist in artist_list %}
-       <li><a href="{% url 'detail' artist.id %}">{{ artist.artist_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Artists are available.</p>
-{% endif %}
+{% extends "history/sitetemplate.html" %}
+
+{% block title %}Django Dancing{% endblock %}
+
+{% block content %}
+<div id="artistList">
+	<h1>All Artists</h1>
+	{% if artist_list %}
+	    <ul>
+	    {% for artist in artist_list %}
+	       <li><a href="{% url 'detail' artist.id %}">{{ artist.artist_name }}</a></li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No Artists are available.</p>
+	{% endif %}
+</div>
+
+{% endblock %}
